@@ -16,15 +16,22 @@ This repo is the shared workspace entrypoint for the packaging layer. The underl
 | [nixpkg-coding-agent-account-manager](https://github.com/RogerNavelsaker/nixpkg-coding-agent-account-manager) | Packaging repo for `coding_agent_account_manager` |
 | [nixpkg-coding-agent-session-search](https://github.com/RogerNavelsaker/nixpkg-coding-agent-session-search) | Packaging repo for `coding_agent_session_search` |
 | [nixpkg-claude-code](https://github.com/RogerNavelsaker/nixpkg-claude-code) | Packaging and wrapper repo for Claude Code |
+| `nixpkg-claude-agent-acp` | Local packaging scaffold for `@agentclientprotocol/claude-agent-acp` (not published yet) |
 | [nixpkg-code-intel-rust](https://github.com/RogerNavelsaker/nixpkg-code-intel-rust) | Packaging repo for Rust code-intelligence tooling |
 | [nixpkg-code-intel-ts](https://github.com/RogerNavelsaker/nixpkg-code-intel-ts) | Packaging repo for TypeScript code-intelligence tooling |
 | [nixpkg-codex](https://github.com/RogerNavelsaker/nixpkg-codex) | Packaging and wrapper repo for Codex |
+| `nixpkg-codex-acp` | Local packaging scaffold for `@zed-industries/codex-acp` (not published yet) |
 | [nixpkg-context-mode-cli](https://github.com/RogerNavelsaker/nixpkg-context-mode-cli) | Packaging repo for `context-mode-cli` |
 | [nixpkg-context-mode-mcp](https://github.com/RogerNavelsaker/nixpkg-context-mode-mcp) | Packaging repo for `context-mode-mcp` |
 | [nixpkg-cross-agent-session-resumer](https://github.com/RogerNavelsaker/nixpkg-cross-agent-session-resumer) | Packaging repo for `cross_agent_session_resumer` |
 | [nixpkg-destructive-command-guard](https://github.com/RogerNavelsaker/nixpkg-destructive-command-guard) | Packaging repo for `destructive_command_guard` |
 | [nixpkg-gemini](https://github.com/RogerNavelsaker/nixpkg-gemini) | Packaging and wrapper repo for Gemini CLI |
+| [nixpkg-jcodemunch](https://github.com/RogerNavelsaker/nixpkg-jcodemunch) | Packaging wrapper for the `jcodemunch-mcp` server |
+| [nixpkg-jdocmunch](https://github.com/RogerNavelsaker/nixpkg-jdocmunch) | Packaging wrapper for the `jdocmunch-mcp` server |
+| [nixpkg-lean-ctx](https://github.com/RogerNavelsaker/nixpkg-lean-ctx) | Packaging repo for `lean-ctx` |
+| [nixpkg-linehash-edit](https://github.com/RogerNavelsaker/nixpkg-linehash-edit) | Packaging repo for `linehash-edit`, exposing `linehash-edit` and `le` |
 | [nixpkg-mcp-agent-mail-rust](https://github.com/RogerNavelsaker/nixpkg-mcp-agent-mail-rust) | Packaging repo for `mcp_agent_mail_rust` |
+| [nixpkg-mcp-communicator-telegram](https://github.com/RogerNavelsaker/nixpkg-mcp-communicator-telegram) | Packaging repo for `mcp-communicator-telegram` |
 | [nixpkg-meta-skill](https://github.com/RogerNavelsaker/nixpkg-meta-skill) | Packaging repo for `meta_skill` |
 | [nixpkg-mulch](https://github.com/RogerNavelsaker/nixpkg-mulch) | Packaging repo for `@os-eco/mulch-cli` |
 | [nixpkg-mcp-nixos-cli](https://github.com/RogerNavelsaker/nixpkg-mcp-nixos-cli) | Packaging repo for `nixos-cli` |
