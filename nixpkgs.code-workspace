@@ -37,6 +37,10 @@
       "path": "./nixpkg-claude-code"
     },
     {
+      "name": "nixpkg-claude-agent-acp",
+      "path": "./nixpkg-claude-agent-acp"
+    },
+    {
       "name": "nixpkg-code-intel-rust",
       "path": "./nixpkg-code-intel-rust"
     },
@@ -47,6 +51,10 @@
     {
       "name": "nixpkg-codex",
       "path": "./nixpkg-codex"
+    },
+    {
+      "name": "nixpkg-codex-acp",
+      "path": "./nixpkg-codex-acp"
     },
     {
       "name": "nixpkg-context-mode-cli",

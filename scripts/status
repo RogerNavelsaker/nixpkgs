@@ -8,9 +8,11 @@ workspace_root="${SHARED_WORKSPACE_ROOT:-$repo_root}"
 repos=(
   nixpkg-canopy
   nixpkg-claude-code
+  nixpkg-claude-agent-acp
   nixpkg-code-intel-rust
   nixpkg-code-intel-ts
   nixpkg-codex
+  nixpkg-codex-acp
   nixpkg-context-mode-cli
   nixpkg-context-mode-mcp
   nixpkg-gemini

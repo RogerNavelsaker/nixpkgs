@@ -9,7 +9,6 @@ ripgrep.pkg-path = "ripgrep"
 fd.pkg-path = "fd"
 bat.pkg-path = "bat"
 eza.pkg-path = "eza"
-bun.pkg-path = "bun"
 pi-coding-agent.flake = "github:RogerNavelsaker/nixpkg-pi-coding-agent"
 pi-coding-agent.outputs = ["out", "pi"]
 seeds-cli.flake = "github:RogerNavelsaker/nixpkg-seeds"
