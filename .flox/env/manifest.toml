@@ -1,46 +1,13 @@
 schema-version = "1.10.0"
 
 [install]
-git.pkg-path = "git"
-gh.pkg-path = "gh"
-direnv.pkg-path = "direnv"
-jq.pkg-path = "jq"
-ripgrep.pkg-path = "ripgrep"
-fd.pkg-path = "fd"
-bat.pkg-path = "bat"
-eza.pkg-path = "eza"
-pi-coding-agent.flake = "github:RogerNavelsaker/nixpkg-pi-coding-agent"
-pi-coding-agent.outputs = ["out", "pi"]
-seeds-cli.flake = "github:RogerNavelsaker/nixpkg-seeds"
-seeds-cli.outputs = ["out", "sd"]
-canopy-cli.flake = "github:RogerNavelsaker/nixpkg-canopy"
-canopy-cli.outputs = ["out", "cn"]
-mulch-cli.flake = "github:RogerNavelsaker/nixpkg-mulch"
-mulch-cli.outputs = ["out", "ml"]
-overstory-cli.flake = "github:RogerNavelsaker/nixpkg-overstory"
-overstory-cli.outputs = ["out", "ov"]
-nixpkg-context-mode-mcp.flake = "github:RogerNavelsaker/nixpkg-context-mode-mcp"
 
 [vars]
-WORKSPACE_OWNER = "RogerNavelsaker"
-WORKSPACE_META = "agent-clis"
 
 [hook]
 on-activate = '''
-  export META_REPO_ROOT="$FLOX_ENV_PROJECT"
-  export SHARED_WORKSPACE_ROOT="$FLOX_ENV_PROJECT"
+  # Symlink repos from RogerNavelsaker based on pattern
+  for r in ../nixpkg-*; do
+    [ -d "$r" ] && ln -sf "$r" .
+  done
 '''
-
-[profile]
-common = """
-  alias workspace-bootstrap="$META_REPO_ROOT/scripts/bootstrap"
-  alias workspace-status="$META_REPO_ROOT/scripts/status"
-  alias gmi='pi-coding-agent --provider google --model gemini-3.1-pro-preview'
-  alias cc='pi-coding-agent --provider anthropic --model claude-opus-4-6'
-  alias cod='pi-coding-agent --provider openai-codex --model gpt-5.4'
-  alias mm='pi-coding-agent --provider llmstudio --model minimax-m2.5'
-  alias qc='pi-coding-agent --provider lmstudio --model qwen3.5-122b-a10b'
-"""
-
-[options]
-systems = ["x86_64-linux"]

@@ -1,165 +1,16 @@
 {
   "folders": [
     {
-      "name": "@nixpkgs",
+      "name": "nixpkgs",
       "path": "."
-    },
-    {
-      "name": "nixpkg-canopy",
-      "path": "./nixpkg-canopy"
-    },
-    {
-      "name": "nixpkg-automated-plan-reviser-pro",
-      "path": "./nixpkg-automated-plan-reviser-pro"
-    },
-    {
-      "name": "nixpkg-beads-rust",
-      "path": "./nixpkg-beads-rust"
-    },
-    {
-      "name": "nixpkg-beads-viewer",
-      "path": "./nixpkg-beads-viewer"
-    },
-    {
-      "name": "nixpkg-cass-memory-system",
-      "path": "./nixpkg-cass-memory-system"
-    },
-    {
-      "name": "nixpkg-coding-agent-account-manager",
-      "path": "./nixpkg-coding-agent-account-manager"
-    },
-    {
-      "name": "nixpkg-coding-agent-session-search",
-      "path": "./nixpkg-coding-agent-session-search"
-    },
-    {
-      "name": "nixpkg-claude-code",
-      "path": "./nixpkg-claude-code"
-    },
-    {
-      "name": "nixpkg-claude-agent-acp",
-      "path": "./nixpkg-claude-agent-acp"
-    },
-    {
-      "name": "nixpkg-code-intel-rust",
-      "path": "./nixpkg-code-intel-rust"
-    },
-    {
-      "name": "nixpkg-code-intel-ts",
-      "path": "./nixpkg-code-intel-ts"
-    },
-    {
-      "name": "nixpkg-codex",
-      "path": "./nixpkg-codex"
-    },
-    {
-      "name": "nixpkg-codex-acp",
-      "path": "./nixpkg-codex-acp"
-    },
-    {
-      "name": "nixpkg-context-mode-cli",
-      "path": "./nixpkg-context-mode-cli"
-    },
-    {
-      "name": "nixpkg-context-mode-mcp",
-      "path": "./nixpkg-context-mode-mcp"
-    },
-    {
-      "name": "nixpkg-cross-agent-session-resumer",
-      "path": "./nixpkg-cross-agent-session-resumer"
-    },
-    {
-      "name": "nixpkg-destructive-command-guard",
-      "path": "./nixpkg-destructive-command-guard"
-    },
-    {
-      "name": "nixpkg-gemini",
-      "path": "./nixpkg-gemini"
-    },
-    {
-      "name": "nixpkg-mcp-agent-mail-rust",
-      "path": "./nixpkg-mcp-agent-mail-rust"
-    },
-    {
-      "name": "nixpkg-meta-skill",
-      "path": "./nixpkg-meta-skill"
-    },
-    {
-      "name": "nixpkg-mulch",
-      "path": "./nixpkg-mulch"
-    },
-    {
-      "name": "nixpkg-nixos-cli",
-      "path": "./nixpkg-nixos-cli"
-    },
-    {
-      "name": "nixpkg-named-tmux-manager",
-      "path": "./nixpkg-named-tmux-manager"
-    },
-    {
-      "name": "nixpkg-overstory",
-      "path": "./nixpkg-overstory"
-    },
-    {
-      "name": "nixpkg-pi-coding-agent-rust",
-      "path": "./nixpkg-pi-coding-agent-rust"
-    },
-    {
-      "name": "nixpkg-pi-coding-agent",
-      "path": "./nixpkg-pi-coding-agent"
-    },
-    {
-      "name": "nixpkg-process-triage",
-      "path": "./nixpkg-process-triage"
-    },
-    {
-      "name": "nixpkg-repo-updater",
-      "path": "./nixpkg-repo-updater"
-    },
-    {
-      "name": "nixpkg-repo-map",
-      "path": "./nixpkg-repo-map"
-    },
-    {
-      "name": "nixpkg-seeds",
-      "path": "./nixpkg-seeds"
-    },
-    {
-      "name": "nixpkg-simultaneous-launch-button",
-      "path": "./nixpkg-simultaneous-launch-button"
-    },
-    {
-      "name": "nixpkg-toon-rust",
-      "path": "./nixpkg-toon-rust"
-    },
-    {
-      "name": "nixpkg-ultimate-bug-scanner",
-      "path": "./nixpkg-ultimate-bug-scanner"
-    },
-    {
-      "name": "nixpkg-trellis",
-      "path": "./nixpkg-trellis"
     }
   ],
   "settings": {
-    "files.exclude": {
-      "**/.direnv": true,
-      "**/.flox": true
-    },
-    "files.watcherExclude": {
-      "**/.direnv/**": true,
-      "**/.flox/**": true
-    },
-    "search.exclude": {
-      "**/.direnv": true,
-      "**/.flox": true
-    },
     "git.detectSubmodules": false
   },
   "extensions": {
     "recommendations": [
       "mkhl.direnv",
-      "oven.bun-vscode",
       "github.vscode-github-actions",
       "github.vscode-pull-request-github"
     ]
