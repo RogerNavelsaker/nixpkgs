@@ -132,10 +132,10 @@ This workspace is the packaging layer for the `nixpkg-*` family. Each local clon
   Packaging: Nix packaging repo for `lean-ctx`.
   Upstream sync: `scripts/update-upstream.sh` syncs from GitHub releases/tags on `yvgude/lean-ctx`.
 
-- `nixpkg-linehash-edit`
+- `nixpkg-linehash`
   Language: Rust confirmed via `buildRustPackage` in `flake.nix`.
-  Packaging: Nix packaging repo for `linehash-edit`, exposing `linehash-edit` and `le`.
-  Upstream sync: no repo-local sync script; source is pinned directly as flake input `github:RogerNavelsaker/linehash-edit`.
+  Packaging: Nix packaging repo for `linehash`, exposing `linehash` and `le`.
+  Upstream sync: no repo-local sync script; source is pinned directly as flake input `github:RogerNavelsaker/linehash`.
 
 - `nixpkg-mcp-agent-mail-rust`
   Language: mixed Rust and Node confirmed via many `Cargo.toml` files and in-tree `package.json` files.

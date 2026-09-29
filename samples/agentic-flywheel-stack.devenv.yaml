@@ -1,0 +1,39 @@
+allow_unfree: true
+
+inputs:
+  nixpkgs:
+    url: github:cachix/devenv-nixpkgs/rolling
+  automated-plan-reviser-pro:
+    url: github:RogerNavelsaker/nixpkg-automated-plan-reviser-pro
+  beads-rust:
+    url: github:RogerNavelsaker/nixpkg-beads-rust
+  beads-viewer:
+    url: github:RogerNavelsaker/nixpkg-beads-viewer
+  cass-memory-system:
+    url: github:RogerNavelsaker/nixpkg-cass-memory-system
+  coding-agent-session-search:
+    url: github:RogerNavelsaker/nixpkg-coding-agent-session-search
+  coding-agent-account-manager:
+    url: github:RogerNavelsaker/nixpkg-coding-agent-account-manager
+  cross-agent-session-resumer:
+    url: github:RogerNavelsaker/nixpkg-cross-agent-session-resumer
+  destructive-command-guard:
+    url: github:RogerNavelsaker/nixpkg-destructive-command-guard
+  mcp-agent-mail-rust:
+    url: github:RogerNavelsaker/nixpkg-mcp-agent-mail-rust
+  meta-skill:
+    url: github:RogerNavelsaker/nixpkg-meta-skill
+  named-tmux-manager:
+    url: github:RogerNavelsaker/nixpkg-named-tmux-manager
+  pi-coding-agent-rust:
+    url: github:RogerNavelsaker/nixpkg-pi-coding-agent-rust
+  process-triage:
+    url: github:RogerNavelsaker/nixpkg-process-triage
+  repo-updater:
+    url: github:RogerNavelsaker/nixpkg-repo-updater
+  simultaneous-launch-button:
+    url: github:RogerNavelsaker/nixpkg-simultaneous-launch-button
+  toon-rust:
+    url: github:RogerNavelsaker/nixpkg-toon-rust
+  ultimate-bug-scanner:
+    url: github:RogerNavelsaker/nixpkg-ultimate-bug-scanner

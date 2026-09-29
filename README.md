@@ -29,7 +29,7 @@ This repo is the shared workspace entrypoint for the packaging layer. The underl
 | [nixpkg-jcodemunch](https://github.com/RogerNavelsaker/nixpkg-jcodemunch) | Packaging wrapper for the `jcodemunch-mcp` server |
 | [nixpkg-jdocmunch](https://github.com/RogerNavelsaker/nixpkg-jdocmunch) | Packaging wrapper for the `jdocmunch-mcp` server |
 | [nixpkg-lean-ctx](https://github.com/RogerNavelsaker/nixpkg-lean-ctx) | Packaging repo for `lean-ctx` |
-| [nixpkg-linehash-edit](https://github.com/RogerNavelsaker/nixpkg-linehash-edit) | Packaging repo for `linehash-edit`, exposing `linehash-edit` and `le` |
+| [nixpkg-linehash](https://github.com/RogerNavelsaker/nixpkg-linehash) | Packaging repo for `linehash`, exposing `linehash` and `le` |
 | [nixpkg-mcp-agent-mail-rust](https://github.com/RogerNavelsaker/nixpkg-mcp-agent-mail-rust) | Packaging repo for `mcp_agent_mail_rust` |
 | [nixpkg-mcp-communicator-telegram](https://github.com/RogerNavelsaker/nixpkg-mcp-communicator-telegram) | Packaging repo for `mcp-communicator-telegram` |
 | [nixpkg-meta-skill](https://github.com/RogerNavelsaker/nixpkg-meta-skill) | Packaging repo for `meta_skill` |
@@ -65,9 +65,9 @@ This repo is the shared workspace entrypoint for the packaging layer. The underl
 ## Shared Workspace
 
 - Preferred layout: clone this repo as `~/Repositories/@nixpkgs` and keep the underlying repos as ignored child directories inside `@nixpkgs/`
-- Shell: Flox + `direnv` via [manifest.toml](/home/rona/Repositories/@nixpkgs/.flox/env/manifest.toml) and [.envrc](/home/rona/Repositories/@nixpkgs/.envrc)
+- Shell: shared workspace devenv + `direnv` via the root devenv configuration and this repo's `.envrc`
 - Workspace file: [nixpkgs.code-workspace](/home/rona/Repositories/@nixpkgs/nixpkgs.code-workspace)
-- Sample repo-local Flox manifest for the flywheel stack: [samples/agentic-flywheel-stack.manifest.toml](/home/rona/Repositories/@nixpkgs/samples/agentic-flywheel-stack.manifest.toml)
+- Sample devenv configuration for the flywheel stack: [YAML inputs](/home/rona/Repositories/@nixpkgs/samples/agentic-flywheel-stack.devenv.yaml) and [Nix package list](/home/rona/Repositories/@nixpkgs/samples/agentic-flywheel-stack.devenv.nix)
 - Bootstrap missing sibling repos with `./scripts/bootstrap`
 - Inspect workspace state with `./scripts/status`
 - Submodules are intentionally not used
