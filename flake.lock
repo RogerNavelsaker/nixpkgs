@@ -1,0 +1,111 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1792502884,
+        "narHash": "sha256-IoNisKcGbUjdd45qCqywGMCYmZ5EnkxezvLII0FWwNA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "postgresql": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792682226,
+        "narHash": "sha256-ZgVFKP31A2JkSnyvlO0IpFZb6VQM6KMuTqNZJumypAU=",
+        "owner": "RogerNavelsaker",
+        "repo": "nixpkg-postgresql",
+        "rev": "cda95019343501c4cd2674a74848c93f308aba51",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RogerNavelsaker",
+        "repo": "nixpkg-postgresql",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "postgresql": "postgresql",
+        "searxng": "searxng",
+        "valkey": "valkey",
+        "vaultwarden": "vaultwarden"
+      }
+    },
+    "searxng": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792682369,
+        "narHash": "sha256-IsbbODf8o77JKBWmFQd9YjEwQkacVFq/1/pYT4jj/18=",
+        "owner": "RogerNavelsaker",
+        "repo": "nixpkg-searxng",
+        "rev": "bb032f008ce00096bb4415dd399318b6dc2a1d08",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RogerNavelsaker",
+        "repo": "nixpkg-searxng",
+        "type": "github"
+      }
+    },
+    "valkey": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792681126,
+        "narHash": "sha256-xdahhFKmuFOnPwGYOi9ape2j/j1XM+QrbJqY+h1uJpY=",
+        "owner": "RogerNavelsaker",
+        "repo": "nixpkg-valkey",
+        "rev": "cc9bdb605b5d6139243ef71ec661a8c2015fdfb5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RogerNavelsaker",
+        "repo": "nixpkg-valkey",
+        "type": "github"
+      }
+    },
+    "vaultwarden": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792681523,
+        "narHash": "sha256-+Q1Di+L62UGTi26P1dt0NKTiwdaMxJl5LxaFa40BzE4=",
+        "owner": "RogerNavelsaker",
+        "repo": "nixpkg-vaultwarden",
+        "rev": "843fb092a1ca0a7d3de08475d420884c4de668dd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RogerNavelsaker",
+        "repo": "nixpkg-vaultwarden",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
