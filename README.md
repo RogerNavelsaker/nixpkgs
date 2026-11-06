@@ -1,25 +1,31 @@
 # nixpkgs
 
-Meta-flake for the independent Nix packaging repositories under `RogerNavelsaker/*`.
+Meta-flake for independent Nix package and repack repositories under `RogerNavelsaker/nixpkg-*`.
 
-Each package remains an independent Git repository with its own release cycle, packaging logic, and upstream tracking. This repository declares package flakes as inputs and aggregates selected outputs. It owns the shared, locked Nixpkgs input; package inputs use `follows = "nixpkgs"` so aggregate evaluation shares that exact node.
+Each package remains an independent Git repository. This flake composes 77 package output sets under one input and shares a locked Nixpkgs revision wherever a package flake declares a Nixpkgs input. Repositories excluded from distribution or scheduled for retirement are omitted.
 
-## Current aggregate
+## Package outputs
 
-The meta-flake migration is in progress. Current image inputs are `nixpkg-valkey`, `nixpkg-vaultwarden`, `nixpkg-postgresql`, and `nixpkg-searxng`, exported as `packages.x86_64-linux.{valkey,vaultwarden,postgresql,searxng}-image`. Add the remaining package repositories after their flakes and public remotes exist; do not recreate the old local symlink layout.
+Package outputs stay grouped by repository under the custom packageSets output, preserving each repository's native package names:
+
+    nix build .#packageSets.x86_64-linux.nixpkg-caveman.default
+    nix build .#packageSets.x86_64-linux.nixpkg-crawl4ai.default
+
+This flake aggregates Nix packages only. OCI images are published separately to GHCR and are not exposed or built here.
+
+Inspect the aggregate with:
 
 ```sh
 nix flake show
-nix build .#valkey-image
 nix flake check
 ```
 
-`flake.lock` pins the shared Nixpkgs revision and each package input revision. A package repository can still build standalone with its own lockfile; when consumed here, its Nixpkgs input follows the meta-flake's pin.
+`flake.lock` pins the shared Nixpkgs revision and each package input revision. Individual repositories remain independently buildable with their own lockfiles.
 
 ## Repository conventions
 
-- Package repositories remain separate Git repositories with `main` as their packaging branch.
-- Keep package flakes reproducible and independent; use the aggregate flake for shared-input composition and selected combined outputs.
+- Package repositories remain independent Git repositories with `main` as their packaging branch.
+- Keep package flakes reproducible; use this aggregate for shared-input composition and namespaced package outputs.
 - Checkout repositories as siblings under `RogerNavelsaker/`; do not symlink them into this meta-repo.
 - Keep packaging concerns separate from upstream source forks and runtime/source repos.
 - Prefer stable `sync:source` workflows in individual package repos.
