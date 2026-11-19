@@ -171,8 +171,9 @@
       packageInputs = builtins.removeAttrs inputs [ "nixpkgs" "self" ];
 
     in {
-      packageSets.${system} = lib.mapAttrs
-        (_: flake: flake.packages.${system})
-        packageInputs;
+      nixpkgs.${system} = lib.mapAttrs' (name: flake:
+        lib.nameValuePair (lib.removePrefix "nixpkg-" name)
+          flake.packages.${system}.default
+      ) packageInputs;
     };
 }

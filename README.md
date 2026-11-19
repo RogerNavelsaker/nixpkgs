@@ -5,11 +5,17 @@ Meta-flake for independent Nix package and repack repositories under `RogerNavel
 Each package remains an independent Git repository. This flake composes 77 package output sets under one input and shares a locked Nixpkgs revision wherever a package flake declares a Nixpkgs input. Repositories excluded from distribution or scheduled for retirement are omitted.
 
 ## Package outputs
+The public output is a flat set of first-party packages, named after their package repositories:
 
-Package outputs stay grouped by repository under the custom packageSets output, preserving each repository's native package names:
+```sh
+nix build .#nixpkgs.x86_64-linux.browser-cli
+nix build .#nixpkgs.x86_64-linux.mulch
+nix build .#nixpkgs.x86_64-linux.seeds
+nix build .#nixpkgs.x86_64-linux.terrarium
+```
 
-    nix build .#packageSets.x86_64-linux.nixpkg-caveman.default
-    nix build .#packageSets.x86_64-linux.nixpkg-crawl4ai.default
+Consumers can select individual packages with `inputs.roger-navelsaker.nixpkgs.${system}.browser-cli`. Each package output is selected lazily; evaluating one attribute does not traverse other package outputs. There is no legacy `packageSets` compatibility alias.
+
 
 This flake aggregates Nix packages only. OCI images are published separately to GHCR and are not exposed or built here.
 
