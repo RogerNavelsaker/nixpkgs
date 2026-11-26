@@ -1,6 +1,21 @@
 {
   description = "Meta-flake for RogerNavelsaker Nix packages and repacks";
 
+  nixConfig = {
+    extra-substituters = [
+      "https://cache.nixos.org"
+      "https://nix-community.cachix.org"
+      "https://rogernavelsaker.cachix.org"
+      "https://nacosolutions.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      "rogernavelsaker.cachix.org-1:n1DtzMNhA9Rz4Kg3xlXOi/KceULu8VrMbs9WXyMFQNQ="
+      "nacosolutions.cachix.org-1:JzCiW2CLcuLXtwOVAg3SlSK/kpqWbfSFEVenyKVUlug="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -10,6 +25,8 @@
     nixpkg-authelia.inputs.nixpkgs.follows = "nixpkgs";
     nixpkg-automated-plan-reviser-pro.url = "github:RogerNavelsaker/nixpkg-automated-plan-reviser-pro";
     nixpkg-automated-plan-reviser-pro.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkg-aweb.url = "github:RogerNavelsaker/nixpkg-aweb";
+    nixpkg-aweb.inputs.nixpkgs.follows = "nixpkgs";
     nixpkg-beads-rust.url = "github:RogerNavelsaker/nixpkg-beads-rust";
     nixpkg-beads-rust.inputs.nixpkgs.follows = "nixpkgs";
     nixpkg-beads-viewer.url = "github:RogerNavelsaker/nixpkg-beads-viewer";
@@ -71,6 +88,7 @@
     nixpkg-headroom.url = "github:RogerNavelsaker/nixpkg-headroom";
     nixpkg-headroom.inputs.nixpkgs.follows = "nixpkgs";
     nixpkg-herdr.url = "github:RogerNavelsaker/nixpkg-herdr";
+    nixpkg-herdr.inputs.nixpkgs.follows = "nixpkgs";
     nixpkg-knip.url = "github:RogerNavelsaker/nixpkg-knip";
     nixpkg-knip.inputs.nixpkgs.follows = "nixpkgs";
     nixpkg-lean-ctl.url = "github:RogerNavelsaker/nixpkg-lean-ctl";
@@ -157,6 +175,8 @@
     nixpkg-wordcraft.inputs.nixpkgs.follows = "nixpkgs";
     nixpkg-xberg.url = "github:RogerNavelsaker/nixpkg-xberg";
     nixpkg-xberg.inputs.nixpkgs.follows = "nixpkgs";
+
+
     nixpkg-warren.inputs.mulch.follows = "nixpkg-mulch";
     nixpkg-warren.inputs.pi-coding-agent.follows = "nixpkg-pi-coding-agent";
     nixpkg-warren.inputs.seeds.follows = "nixpkg-seeds";

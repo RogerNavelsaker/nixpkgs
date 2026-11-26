@@ -281,3 +281,7 @@ Confirmed local git clones from the workspace inventory:
 - Where `Language` says `not confirmed`, that means I did not find a repo-local manifest that proves the implementation language from this checkout alone.
 - Where `Upstream sync` says `no explicit repo-root sync script confirmed`, that means I did not find a repo-local sync script that cleanly identifies the active upstream lane.
 - Treat the `Packaging Policy` section as the desired convergence target when evolving these repos.
+
+## Meta-flake sync
+
+`flake.nix` carries remote `github:RogerNavelsaker/nixpkg-*` inputs only (no `path:` inputs, no tracked symlinks to local clones). Edit inputs through `scripts/sync-meta-flake.sh`; verify with `scripts/check-meta-flake.sh` and `nix flake check --accept-flake-config`. Package repos notify via `repository_dispatch` type `nixpkg-updated` (see README; secret `META_FLAKE_DISPATCH_TOKEN` is a per-repo rollout follow-up).
