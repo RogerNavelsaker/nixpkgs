@@ -1,3 +1,5 @@
 # nixpkg-* repos skipped by sync/check (one per line, with reason).
 # nixpkg-toolflow-mcp: flake.nix input 'path:github:nix-community/bun2nix?tag=2.0.8' is invalid; locking the meta-flake fails. Remove this line once the repo is fixed.
 nixpkg-toolflow-mcp
+# nixpkg-infisical: excluded for licence; upstream is archived.
+nixpkg-infisical

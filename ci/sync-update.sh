@@ -2,6 +2,7 @@
 # Run the caller's sync step. Uses sync_script from .nixpkg-sync.json, else the standard fallbacks.
 set -euo pipefail
 HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+export NIXPKG_CI_DIR="$HERE"  # lets sync_script reach shared scripts, e.g. bash "$NIXPKG_CI_DIR/sync-github-release.sh"
 cd "$(git rev-parse --show-toplevel)"
 . "$HERE/lib.sh"
 script=$(cfg sync_script)
