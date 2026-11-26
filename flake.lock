@@ -757,11 +757,11 @@
     "gemini-cli-main-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1780670113,
-        "narHash": "sha256-3hHSSVQ5M6+aH0ZhgS9eBqJisUBgwIcvBiBWS2FWUHI=",
+        "lastModified": 1795629569,
+        "narHash": "sha256-dKSMa8mAentl2tkd0u0UE4UqOEeFy90mV2cx9LBYgEs=",
         "owner": "google-gemini",
         "repo": "gemini-cli",
-        "rev": "f40498db644ac570a4bba90bb8711239d802ddc6",
+        "rev": "60f8082b14ffa7f10b608270232f3f57b5abbec8",
         "type": "github"
       },
       "original": {
@@ -988,11 +988,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795705887,
-        "narHash": "sha256-R73RV8EtBnc8n5vylA5FsXg1UIVa0HVRlPhgkTgzs64=",
+        "lastModified": 1795708419,
+        "narHash": "sha256-+1I2nUi59prBSwMdIVvyzYDof192BcpYgbXIP6u6Jp4=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-beads-viewer",
-        "rev": "bfb433398499af8d7567f3081237f164bb29a547",
+        "rev": "bf646e96f78766f79a996c55c5c025b90eb2081b",
         "type": "github"
       },
       "original": {
@@ -1073,11 +1073,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795705899,
-        "narHash": "sha256-35ztp47SS4bge0xffqjBTRXqLH6vfsJb7L9yakzBs7E=",
+        "lastModified": 1795708425,
+        "narHash": "sha256-gW8VNxs3Nq8wpNlPh0TLOGnYaQ4QCBoy9nWTSZN4/BE=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-burrow",
-        "rev": "8fa2ee9fc51d36e8379b7fe6f8ad68de66ebdb75",
+        "rev": "ff179dd9460bdbf3aab376a065c3ca968665844e",
         "type": "github"
       },
       "original": {
@@ -1114,11 +1114,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795705905,
-        "narHash": "sha256-cqxbybZ//0CN6c5reTPEASnUur3G6k4UQfAVdH9+xJY=",
+        "lastModified": 1795708430,
+        "narHash": "sha256-zKToA0WMvIpPQ88kh7Ia2cUeQwzjEd8ILElArOyNdNM=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-canopy",
-        "rev": "e4ab6a0cca27f152e49e38db02ebdb13f7c4dea3",
+        "rev": "70cfe146007812dd3e8f4d2a132a6afd3ab92e1d",
         "type": "github"
       },
       "original": {
@@ -1237,11 +1237,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795705922,
-        "narHash": "sha256-Z6tCMsBDSK8pA9K34XUHLbX4RLmRUUjwGqhHHa6Bi08=",
+        "lastModified": 1795708436,
+        "narHash": "sha256-qIwJgg4XtHEaDU7sE6Z26My/treptcXNSK4xkleW0Vw=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-coding-agent-account-manager",
-        "rev": "ce3bf66f45f4913f6622ff580c61d0564ef0dc92",
+        "rev": "aa0f6da431e2e9ce7a58bb48dd05400bad9e4c5e",
         "type": "github"
       },
       "original": {
@@ -1530,11 +1530,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795706310,
-        "narHash": "sha256-/3VrOJzZa0FjYonFotHYoIcecP/bWyziCMohmGy7knY=",
+        "lastModified": 1795707812,
+        "narHash": "sha256-0kYuD0qNfIW/ihgke5hk+ebThioqY6sHJZvqfEtCu8Q=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-gemini",
-        "rev": "de6f3720fbca4b1194526c9d29ec6067a2ab39be",
+        "rev": "065af62a1c2b2c3e38fec2cf20eba6289541eb67",
         "type": "github"
       },
       "original": {
@@ -1819,11 +1819,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795705240,
-        "narHash": "sha256-Upr5OJKdpuJhAgpxhhP5UMDX9aiMoFR4//elIB35f7w=",
+        "lastModified": 1795707745,
+        "narHash": "sha256-q4ElEBxv80V/8qGINjNL9IkjvjB49AbmQGCw0IKL/tA=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-named-tmux-manager",
-        "rev": "e34dcbb77819cbad7c0c33cd923f6f1ae398bccc",
+        "rev": "5bd381bd749e7e12c438bd5736c452152ba2c432",
         "type": "github"
       },
       "original": {
@@ -2204,11 +2204,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795705213,
-        "narHash": "sha256-gcu1gwCR5M/hVj/o+L8y6sVy9V+s+dwnA/sGnUDKo2U=",
+        "lastModified": 1795707569,
+        "narHash": "sha256-zl0SJmQvy5O2OzILISNMLh+F09EobsF4wuHJQs0eECg=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-simultaneous-launch-button",
-        "rev": "f2f7935cbae22ef7f0be42ee1875a339fd674ed8",
+        "rev": "a9f255cb8a0723c4711b5aaa60c72c45b27673a2",
         "type": "github"
       },
       "original": {
