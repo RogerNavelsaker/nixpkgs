@@ -285,3 +285,7 @@ Confirmed local git clones from the workspace inventory:
 ## Meta-flake sync
 
 `flake.nix` carries remote `github:RogerNavelsaker/nixpkg-*` inputs only (no `path:` inputs, no tracked symlinks to local clones). Edit inputs through `scripts/sync-meta-flake.sh`; verify with `scripts/check-meta-flake.sh` and `nix flake check --accept-flake-config`. Package repos notify via `repository_dispatch` type `nixpkg-updated` (see README; secret `META_FLAKE_DISPATCH_TOKEN` is a per-repo rollout follow-up).
+
+## Central CI framework
+
+Package repos use `uses: RogerNavelsaker/nixpkgs/.github/workflows/reusable-{ci,sync-upstream}.yml@main` callers and a root `.nixpkg-sync.json`; do not copy `check-sync.sh` into package repos. Onboard with `ci/migrate-repo.sh <repo-path>`, then fill the config. Validate script changes with `ci/test-check-sync.sh`. See README "Central CI and sync framework".

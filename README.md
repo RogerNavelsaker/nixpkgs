@@ -64,3 +64,15 @@ Add as the last step of each package repo's sync workflow. Needs secret `META_FL
 ```
 
 Until a repo adopts this, the hourly schedule picks up its updates.
+
+## Central CI and sync framework
+
+Every `nixpkg-*` repo calls reusable workflows from this repo instead of carrying its own copy.
+
+- `.github/workflows/reusable-ci.yml`: checks out the caller (full history), installs Nix, sets up Cachix `rogernavelsaker`, runs `ci/check-sync.sh`, `nix flake check`, `nix build .#default`.
+- `.github/workflows/reusable-sync-upstream.yml`: runs the caller's sync step (`ci/sync-update.sh`), builds `.#default` first, commits `chore: sync upstream <version>` to the default branch only when the build passes, runs `ci/check-sync.sh` (a stale version fails the run), then dispatches `nixpkg-updated` here when `META_FLAKE_DISPATCH_TOKEN` exists (otherwise skips).
+- `ci/check-sync.sh` reads the caller's `.nixpkg-sync.json`: `kind` (`git-tag|github-release|npm|pypi|git-head|none`), `upstream` (git URL, `owner/repo`, npm or pypi name), `tag_regex`, `tag_prefix`, `version_file` with `version_jq` or `version_grep`, `pinned_paths[]`, optional `pinned_flake_regex`, `sync_script`, `cachix_name`, `sync_workflow`. Kind `none` keeps the structural checks and skips version checks. `CHECK_OFFLINE=1` skips network checks; `BASE_REF` enables bump-on-change.
+- `ci/templates/` holds the thin callers; `ci/migrate-repo.sh <repo-path>` writes them plus a `.nixpkg-sync.json` skeleton (idempotent, no network). Callers must grant `permissions: contents: write` for sync and pass `secrets: inherit`.
+- `ci/test-check-sync.sh` runs offline fixtures for each kind and one induced failure per structural check.
+
+Callers reference `@main`, so merging here changes every repo's CI. This repo is public, so public callers need no Actions-access setting; a private caller needs Settings → Actions → General → Access set to allow access from repositories in the owner account.
