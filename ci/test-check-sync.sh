@@ -41,4 +41,8 @@ out=$(cd "$ROOT/b-nobump" && BASE_REF=main bash "$HERE/check-sync.sh" 2>&1); gre
 out=$(cd "$ROOT/b-nobump" && BASE_REF=main bash "$HERE/check-sync.sh" 2>&1); grep -q 'PASS  version bump on pinned-source change (1.2.3 -> 1.2.4' <<<"$out" && echo "ok    bump accepted" || { echo "NOTOK bump2"; nfail=1; }
 # migrate idempotent
 mkdir -p "$ROOT/m" && (cd "$ROOT/m" && git init -q) && bash "$HERE/migrate-repo.sh" "$ROOT/m" >/dev/null && cp -r "$ROOT/m" "$ROOT/m1" && bash "$HERE/migrate-repo.sh" "$ROOT/m" >/dev/null && diff -r -x .git "$ROOT/m" "$ROOT/m1" >/dev/null && echo "ok    migrate-repo idempotent" || { echo "NOTOK migrate"; nfail=1; }
+# cron minute hashes the origin repo name, not the checkout dir name
+mkdir -p "$ROOT/central-sync" && (cd "$ROOT/central-sync" && git init -q && git remote add origin https://example.invalid/RogerNavelsaker/nixpkg-cadcraft.git) && bash "$HERE/migrate-repo.sh" "$ROOT/central-sync" >/dev/null
+want=$(( $(printf '%s' nixpkg-cadcraft | cksum | cut -d' ' -f1) % 60 ))
+grep -qE "cron: \"$want " "$ROOT/central-sync/.github/workflows/sync-upstream.yml" && echo "ok    migrate-repo cron minute from origin name" || { echo "NOTOK migrate origin-name minute (want $want)"; nfail=1; }
 exit $nfail
