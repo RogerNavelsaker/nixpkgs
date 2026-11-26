@@ -2,7 +2,7 @@
 
 Meta-flake for independent Nix package and repack repositories under `RogerNavelsaker/nixpkg-*`.
 
-Each package remains an independent Git repository. This flake composes one input per public `nixpkg-*` repository (78 at last sync) output sets under one input and shares a locked Nixpkgs revision wherever a package flake declares a Nixpkgs input. Repositories excluded from distribution or scheduled for retirement are omitted.
+Each package remains an independent Git repository. This flake composes one input per public `nixpkg-*` repository (78 at last sync) under one flake and shares a locked Nixpkgs revision wherever a package flake declares a Nixpkgs input. Repositories excluded from distribution or scheduled for retirement are omitted.
 
 ## Package outputs
 The public output is a flat set of first-party packages, named after their package repositories:
