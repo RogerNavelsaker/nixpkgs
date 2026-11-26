@@ -1,0 +1,43 @@
+name: sync-meta-flake
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [nixpkg-updated]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-meta-flake
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: cachix/install-nix-action@v31
+        with:
+          extra_nix_config: |
+            accept-flake-config = true
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+      - uses: cachix/cachix-action@v16
+        with:
+          name: rogernavelsaker
+          authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+      - name: Sync nixpkg-* inputs
+        id: sync
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: scripts/sync-meta-flake.sh
+      - name: nix flake check
+        run: nix flake check --accept-flake-config
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: sync nixpkg-* inputs ${{ steps.sync.outputs.summary || github.event.client_payload.repo || 'lock bump' }}"
+          file_pattern: flake.nix flake.lock
