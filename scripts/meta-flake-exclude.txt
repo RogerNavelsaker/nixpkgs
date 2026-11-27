@@ -3,3 +3,21 @@
 nixpkg-toolflow-mcp
 # nixpkg-infisical: excluded for licence; upstream is archived.
 nixpkg-infisical
+# Retired Dicklesworthstone-based packaging repos. Reason: archived: upkeep burden and no downstream usage.
+nixpkg-automated-plan-reviser-pro
+nixpkg-beads-rust
+nixpkg-beads-viewer
+nixpkg-cass-memory-system
+nixpkg-coding-agent-account-manager
+nixpkg-coding-agent-session-search
+nixpkg-cross-agent-session-resumer
+nixpkg-destructive-command-guard
+nixpkg-mcp-agent-mail-rust
+nixpkg-meta-skill
+nixpkg-named-tmux-manager
+nixpkg-pi-coding-agent-rust
+nixpkg-process-triage
+nixpkg-repo-updater
+nixpkg-simultaneous-launch-button
+nixpkg-toon-rust
+nixpkg-ultimate-bug-scanner
