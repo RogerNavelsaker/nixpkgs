@@ -127,6 +127,8 @@
     nixpkg-terrarium.inputs.nixpkgs.follows = "nixpkgs";
     nixpkg-tinacms-cli.url = "github:RogerNavelsaker/nixpkg-tinacms-cli";
     nixpkg-tinacms-cli.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkg-toolflow-mcp.url = "github:RogerNavelsaker/nixpkg-toolflow-mcp";
+    nixpkg-toolflow-mcp.inputs.nixpkgs.follows = "nixpkgs";
     nixpkg-trellis.url = "github:RogerNavelsaker/nixpkg-trellis";
     nixpkg-trellis.inputs.nixpkgs.follows = "nixpkgs";
     nixpkg-valkey.url = "github:RogerNavelsaker/nixpkg-valkey";

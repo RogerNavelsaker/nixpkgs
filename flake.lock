@@ -44,12 +44,38 @@
     "bun2nix_10": {
       "inputs": {
         "flake-parts": "flake-parts_10",
+        "import-tree": "import-tree",
         "nixpkgs": [
-          "nixpkg-trellis",
+          "nixpkg-toolflow-mcp",
           "nixpkgs"
         ],
         "systems": "systems_22",
         "treefmt-nix": "treefmt-nix_11"
+      },
+      "locked": {
+        "lastModified": 1770895533,
+        "narHash": "sha256-v3QaK9ugy9bN9RXDnjw0i2OifKmz2NnKM82agtqm/UY=",
+        "owner": "nix-community",
+        "repo": "bun2nix",
+        "rev": "c843f477b15f51151f8c6bcc886954699440a6e1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "2.0.8",
+        "repo": "bun2nix",
+        "type": "github"
+      }
+    },
+    "bun2nix_11": {
+      "inputs": {
+        "flake-parts": "flake-parts_11",
+        "nixpkgs": [
+          "nixpkg-trellis",
+          "nixpkgs"
+        ],
+        "systems": "systems_23",
+        "treefmt-nix": "treefmt-nix_12"
       },
       "locked": {
         "lastModified": 1778446047,
@@ -65,15 +91,15 @@
         "type": "github"
       }
     },
-    "bun2nix_11": {
+    "bun2nix_12": {
       "inputs": {
-        "flake-parts": "flake-parts_11",
+        "flake-parts": "flake-parts_12",
         "nixpkgs": [
           "nixpkg-warren",
           "nixpkgs"
         ],
-        "systems": "systems_23",
-        "treefmt-nix": "treefmt-nix_12"
+        "systems": "systems_24",
+        "treefmt-nix": "treefmt-nix_13"
       },
       "locked": {
         "lastModified": 1778446047,
@@ -364,6 +390,24 @@
     },
     "flake-parts_10": {
       "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1769996383,
+        "narHash": "sha256-AnYjnFWgS49RlqX7LrC4uA+sCCDBj0Ry/WOJ5XWAsa0=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "57928607ea566b5db3ad13af0e57e921e6b12381",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_11": {
+      "inputs": {
         "nixpkgs-lib": [
           "nixpkg-trellis",
           "bun2nix",
@@ -384,7 +428,7 @@
         "type": "github"
       }
     },
-    "flake-parts_11": {
+    "flake-parts_12": {
       "inputs": {
         "nixpkgs-lib": [
           "nixpkg-warren",
@@ -776,6 +820,21 @@
         "owner": "herdrdev",
         "repo": "herdr",
         "rev": "143bf5fd4781d164260c63fe28e7dc08054ad32f",
+        "type": "github"
+      }
+    },
+    "import-tree": {
+      "locked": {
+        "lastModified": 1763762820,
+        "narHash": "sha256-ZvYKbFib3AEwiNMLsejb/CWs/OL/srFQ8AogkebEPF0=",
+        "owner": "vic",
+        "repo": "import-tree",
+        "rev": "3c23749d8013ec6daa1d7255057590e9ca726646",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vic",
+        "repo": "import-tree",
         "type": "github"
       }
     },
@@ -1951,9 +2010,30 @@
         "type": "github"
       }
     },
-    "nixpkg-trellis": {
+    "nixpkg-toolflow-mcp": {
       "inputs": {
         "bun2nix": "bun2nix_10",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795768516,
+        "narHash": "sha256-rho+wPXoK5+yiIcZ3hefI+dao5LO2VEuwVP8WfjhSdA=",
+        "owner": "RogerNavelsaker",
+        "repo": "nixpkg-toolflow-mcp",
+        "rev": "d697a48cf0fa5d5360e4331d74f759811d29779a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RogerNavelsaker",
+        "repo": "nixpkg-toolflow-mcp",
+        "type": "github"
+      }
+    },
+    "nixpkg-trellis": {
+      "inputs": {
+        "bun2nix": "bun2nix_11",
         "nixpkgs": [
           "nixpkgs"
         ]
@@ -2034,7 +2114,7 @@
     },
     "nixpkg-warren": {
       "inputs": {
-        "bun2nix": "bun2nix_11",
+        "bun2nix": "bun2nix_12",
         "canopy": "canopy",
         "mulch": [
           "nixpkg-mulch"
@@ -2124,6 +2204,21 @@
         "owner": "NixOS",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1769909678,
+        "narHash": "sha256-cBEymOf4/o3FD5AZnzC3J9hLbiZ+QDT/KDuyHXVJOpM=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "72716169fe93074c333e8d0173151350670b824c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
         "type": "github"
       }
     },
@@ -2442,6 +2537,7 @@
         "nixpkg-soundcraft": "nixpkg-soundcraft",
         "nixpkg-terrarium": "nixpkg-terrarium",
         "nixpkg-tinacms-cli": "nixpkg-tinacms-cli",
+        "nixpkg-toolflow-mcp": "nixpkg-toolflow-mcp",
         "nixpkg-trellis": "nixpkg-trellis",
         "nixpkg-valkey": "nixpkg-valkey",
         "nixpkg-vaultwarden": "nixpkg-vaultwarden",
@@ -2739,6 +2835,21 @@
         "type": "github"
       }
     },
+    "systems_24": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "systems_3": {
       "locked": {
         "lastModified": 1681028828,
@@ -2891,6 +3002,28 @@
     "treefmt-nix_11": {
       "inputs": {
         "nixpkgs": [
+          "nixpkg-toolflow-mcp",
+          "bun2nix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770228511,
+        "narHash": "sha256-wQ6NJSuFqAEmIg2VMnLdCnUc0b7vslUohqqGGD+Fyxk=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "337a4fe074be1042a35086f15481d763b8ddc0e7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "treefmt-nix_12": {
+      "inputs": {
+        "nixpkgs": [
           "nixpkg-trellis",
           "bun2nix",
           "nixpkgs"
@@ -2910,7 +3043,7 @@
         "type": "github"
       }
     },
-    "treefmt-nix_12": {
+    "treefmt-nix_13": {
       "inputs": {
         "nixpkgs": [
           "nixpkg-warren",
