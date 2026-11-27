@@ -47,6 +47,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: bash "$RUNNER_TEMP/nixpkgs-ci/sync-update.sh"
 
+      - name: Regenerate Bun package locks (bun_lock)
+        run: nix shell nixpkgs#jq -c bash "$RUNNER_TEMP/nixpkgs-ci/regen-bun-lock.sh"
+
       - name: Read synced version
         id: version
         run: |
