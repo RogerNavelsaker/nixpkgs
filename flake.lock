@@ -1791,11 +1791,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795768585,
-        "narHash": "sha256-NlwtcXe+rihVL7FudboXV6R3/Acqdg6X9rLLOYu7zZo=",
+        "lastModified": 1795813914,
+        "narHash": "sha256-6i4YwSJz2eHf5FtyrnIT5RLK8z8TCyeE7AF7NQ6DiRw=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-pi-coding-agent",
-        "rev": "f50bdaf629441247de83609b762e17c7bd85930a",
+        "rev": "efacfd41c10041f0fe3e8494c1682c3f739bb1e6",
         "type": "github"
       },
       "original": {

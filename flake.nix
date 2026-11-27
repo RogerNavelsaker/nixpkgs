@@ -153,6 +153,7 @@
 
 
 
+
     nixpkg-warren.inputs.mulch.follows = "nixpkg-mulch";
     nixpkg-warren.inputs.pi-coding-agent.follows = "nixpkg-pi-coding-agent";
     nixpkg-warren.inputs.seeds.follows = "nixpkg-seeds";
