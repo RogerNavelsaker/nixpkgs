@@ -2,9 +2,14 @@
 
 Parked repos stay in the meta-flake and Cachix. Retired repos are listed in the section below. Callers exclude them from version-sync until the blocker clears.
 
-| Repo | Blocker | Unblock condition |
-|---|---|---|
-| `nixpkg-beeper-desktop-cli` | Upstream v0.6.4 is a TS/bun monorepo with no `go.mod`; the Go packaging no longer applies. | Repackage for the bun monorepo, or pin a pre-monorepo Go tag. |
+No repos are currently blocked.
+
+## Resolved
+
+- `nixpkg-aweb`: tracks git-head; nixpkgs lock gives Go 1.27.3. PR nixpkg-aweb#2.
+- `nixpkg-bifrost`: upstream 2.7.0, patches dropped, Go 1.27.4 overlay. PR nixpkg-bifrost#2.
+- `nixpkg-litellm`: 1.111.0, `litellm_cli` installed via `cli_package.py` preInstall. PR nixpkg-litellm#2.
+- `nixpkg-beeper-desktop-cli`: packages prebuilt `beeper/cli` linux-x64 release binary, x86_64-linux only. PR nixpkg-beeper-desktop-cli#17.
 
 ## Excluded from the meta-flake
 
