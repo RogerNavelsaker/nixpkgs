@@ -23,7 +23,7 @@ CACHIX_NAME=$(cfg cachix_name); CACHIX_NAME=${CACHIX_NAME:-rogernavelsaker}
 SYNC_WORKFLOW=$(cfg sync_workflow); SYNC_WORKFLOW=${SYNC_WORKFLOW:-.github/workflows/sync-upstream.yml}
 PINNED_FLAKE_REGEX=$(cfg pinned_flake_regex)
 mapfile -t PINNED_PATHS < <(cfg_list pinned_paths)
-case "$KIND" in git-tag|github-release|npm|pypi|git-head|none) ;; *) echo "FAIL  unknown kind '$KIND'"; exit 1;; esac
+case "$KIND" in git-tag|github-release|npm|pypi|git-head|url-binary|none) ;; *) echo "FAIL  unknown kind '$KIND'"; exit 1;; esac
 
 WORKFLOWS=$(ls .github/workflows/*.yml .github/workflows/*.yaml 2>/dev/null)
 CENTRAL='RogerNavelsaker/nixpkgs/\.github/workflows/reusable-'
@@ -73,6 +73,10 @@ latest_upstream() {
       gh api "repos/$UPSTREAM/releases/latest" -q .tag_name 2>/dev/null | sed "s|^$TAG_PREFIX||" ;;
     npm)  curl -fsS "https://registry.npmjs.org/$UPSTREAM/latest" 2>/dev/null | jq -r .version ;;
     pypi) curl -fsS "https://pypi.org/pypi/$UPSTREAM/json" 2>/dev/null | jq -r .info.version ;;
+    url-binary)
+      local raw jqx; jqx=$(cfg latest_version_jq); jqx=${jqx:-.version}
+      raw=$(curl -fsS "$(cfg version_url)" 2>/dev/null) || return 1
+      if printf '%s' "$raw" | jq -e . >/dev/null 2>&1; then printf '%s' "$raw" | jq -r "$jqx"; else printf '%s' "${raw//[[:space:]]/}"; fi ;;
     git-head) git ls-remote "$UPSTREAM" HEAD 2>/dev/null | awk '{print $1}' ;;
   esac
 }
