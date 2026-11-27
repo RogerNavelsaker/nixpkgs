@@ -941,11 +941,11 @@
         "uv2nix": "uv2nix"
       },
       "locked": {
-        "lastModified": 1795777946,
-        "narHash": "sha256-1sPtGorPHd0UJhAsDrwweOsX6EFBnKQp1xkZMTQazjY=",
+        "lastModified": 1795815702,
+        "narHash": "sha256-KBu9mb5L6LdnQKG0bAySlq8DB2DimlkxsXU9hsddyiY=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-aweb",
-        "rev": "717bf9fb6e74f851ea5ffc672b4a6d66524601ba",
+        "rev": "337a826401c2137d9635dda75ae1a890592fbc79",
         "type": "github"
       },
       "original": {
