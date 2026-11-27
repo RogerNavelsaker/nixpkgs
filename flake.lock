@@ -1192,11 +1192,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795769855,
-        "narHash": "sha256-eQmJk+9Zg07JauEyH2xfWaiFXsxBbV0wxVwLCIZe1jg=",
+        "lastModified": 1795814358,
+        "narHash": "sha256-Lb32z29SExXKRbclsy7PRzidFf1zRoWgSPLB3rD5TRA=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-crawlberg",
-        "rev": "e8d71c51f7b7e9c3156e6fff0e1696cf20a7bc64",
+        "rev": "e2ee25a698171a93915b983e3f59ea71eb252ee9",
         "type": "github"
       },
       "original": {
