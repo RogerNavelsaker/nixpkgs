@@ -1502,11 +1502,11 @@
         "utils": "utils_3"
       },
       "locked": {
-        "lastModified": 1795769843,
-        "narHash": "sha256-2fVam2w4kuYJzZE/ACtA69ez4VNtwJqWOWty1l8p5+w=",
+        "lastModified": 1795815931,
+        "narHash": "sha256-omcfmsV/n6vc0Jmzsvr9rQoD6/iVWA5hO0AwcnPjmiQ=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-lean-ctx",
-        "rev": "36cd9d5d05d83316755bf2fc00b7d81549c82233",
+        "rev": "6efb2d291dd1ce83d01411bc7485d1a32ea46dd2",
         "type": "github"
       },
       "original": {
