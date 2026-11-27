@@ -54,8 +54,12 @@ no_npm_publish() {
 
 check "no path: flake inputs (flake.nix, flake.lock)" no_path_inputs
 check "no local folder-to-folder sync (scripts, workflows)" no_local_sync
-check "sync workflow has schedule cron ($SYNC_WORKFLOW)" sync_schedule
-check "sync workflow commits to default branch" sync_commits
+if [ "$KIND" = none ]; then
+  skip "sync workflow checks (kind none: no upstream sync)"
+else
+  check "sync workflow has schedule cron ($SYNC_WORKFLOW)" sync_schedule
+  check "sync workflow commits to default branch" sync_commits
+fi
 check "cachix configured (name $CACHIX_NAME)" cachix_workflow
 check "flake nixConfig has $CACHIX_NAME substituter" cachix_flake
 check "no npm publish / NPM_TOKEN" no_npm_publish
