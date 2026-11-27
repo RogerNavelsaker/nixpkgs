@@ -2,6 +2,12 @@ name: Reusable CI
 
 on:
   workflow_call:
+    inputs:
+      build_targets:
+        description: Space-separated flake attributes built after .#default, e.g. ".#caveman-image .#caveman-cli"
+        required: false
+        type: string
+        default: ""
     secrets:
       CACHIX_AUTH_TOKEN:
         required: false
@@ -52,3 +58,11 @@ jobs:
 
       - name: Build Default Package
         run: nix build .#default --accept-flake-config --no-link
+
+      - name: Build Extra Targets
+        if: inputs.build_targets != ''
+        env:
+          BUILD_TARGETS: ${{ inputs.build_targets }}
+        run: |
+          read -ra targets <<< "$BUILD_TARGETS"
+          nix build "${targets[@]}" --accept-flake-config --no-link --print-build-logs
