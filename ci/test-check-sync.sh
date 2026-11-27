@@ -21,6 +21,8 @@ expect() { # expect <label> <want-exit> <fixture> [grep-pattern]
 for k in git-tag github-release npm pypi git-head; do mk "k-$k" "$k"; expect "kind $k offline clean" 0 "k-$k" 'SKIP  manifest version == latest upstream \(CHECK_OFFLINE'; done
 mk k-none none; jq 'del(.version_file,.version_jq)' "$ROOT/k-none/.nixpkg-sync.json" > "$ROOT/k-none/x" && mv "$ROOT/k-none/x" "$ROOT/k-none/.nixpkg-sync.json"
 expect "kind none (no version_file)" 0 k-none 'SKIP  manifest version == latest upstream \(kind none\)'
+mk k-none-nosync none; rm .github/workflows/sync-upstream.yml 2>/dev/null; (cd "$ROOT/k-none-nosync" && git add -A && git commit -qm nosync)
+expect "kind none without sync workflow passes" 0 k-none-nosync 'SKIP  sync workflow checks \(kind none'
 mk k-grep git-tag; jq 'del(.version_jq)|.version_file="flake.nix"|.version_grep="version = \"[^\"]+\""' "$ROOT/k-grep/.nixpkg-sync.json" > "$ROOT/k-grep/x" && mv "$ROOT/k-grep/x" "$ROOT/k-grep/.nixpkg-sync.json"
 echo '{ version = "9.9.9"; nixConfig.extra-substituters = ["https://rogernavelsaker.cachix.org"]; }' > "$ROOT/k-grep/flake.nix"
 expect "version_grep reads flake.nix" 0 k-grep 'SKIP  manifest version == latest upstream \(CHECK_OFFLINE'
