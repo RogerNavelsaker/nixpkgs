@@ -1770,11 +1770,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795768500,
-        "narHash": "sha256-ElL2tbowelKuCIXpjDn8GEp0/V4bZdl1J9YVs9nTPUE=",
+        "lastModified": 1795854421,
+        "narHash": "sha256-wo3caJSaECrn5t5KQJYZsnKuZohzZsKxXGm2OvjN0Hk=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-pi-bolt",
-        "rev": "83c180af74bee4907bc703ac47c847ca35ff810e",
+        "rev": "cec9d754c61271ee31fe91f6b4f9d86f0abd6934",
         "type": "github"
       },
       "original": {
