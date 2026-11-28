@@ -1544,11 +1544,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795768510,
-        "narHash": "sha256-/k3saEmY10n8ndbvHMZbv+X/cgKuy/GzAPXOfnahULk=",
+        "lastModified": 1795852469,
+        "narHash": "sha256-rV52SyHk6eaX/vB3QoJJdSA2ZdozGEXtnQfyaFxnZEY=",
         "owner": "RogerNavelsaker",
         "repo": "nixpkg-linehash",
-        "rev": "e0e60f837ca6c634aa565240602e4cb327786a03",
+        "rev": "4c6c3639d9f1dbc2f1185567b030c62ece116c3d",
         "type": "github"
       },
       "original": {
